@@ -1,0 +1,8 @@
+django
+djangorestframework
+whitenoise
+dotenv
+crispy-bootstrap5
+Pillow
+psycopg2-binary
+pyTelegramBotAPI

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>User Profile Detail</h1>
+    <div>
+        <h2>Avatar:</h2>
+        {% if profile.avatar %}
+            <img src="{{ profile.avatar.url }}" alt="Avatar">
+        {% else %}
+            <p>No avatar uploaded</p>
+        {% endif %}
+    </div>
+    <div>
+        <h2>User Information:</h2>
+        <p>Username: {{ profile.username }}</p>
+        <p>Email: {{ profile.email }}</p>
+        <p>Age: {{ profile.age }}</p>
+    </div>
+    <a href="{% url 'profile_edit' pk=user.pk %}" class="btn btn-primary">Edit Profile</a>
+{% endblock %}
