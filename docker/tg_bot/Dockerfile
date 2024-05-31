@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt
 
 COPY . /code/
 
-WORKDIR /code/blog_app
+WORKDIR /code/tg_bot

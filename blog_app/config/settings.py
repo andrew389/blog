@@ -20,10 +20,7 @@ BASE_DIR_PARENT = BASE_DIR.parent
 
 # Add the parent directory to the sys.path
 sys.path.append(str(BASE_DIR_PARENT))
-
-
-# SECURITY WARNING: keep the secret key used in production secret!
-from env_config import SECRET_KEY, EMAIL_HOST_PASSWORD
+from env_config.config import SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -43,15 +40,16 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'rest_framework',
 
-    #3rd party
+    # 3rd party
     'crispy_bootstrap5',
     'crispy_forms',
     
-    #local
+    # Locals
     'accounts',
     'pages',
     'articles',
     'api',
+    'parser',
 ]
 
 REST_FRAMEWORK = {
@@ -105,7 +103,8 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'super',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
+        #'PORT': '5432'
     }
 }
 

@@ -1,6 +1,6 @@
 version: '3.6'
 services:
-   app:
+  app:
     container_name: blog_app
     restart: always
     build:
@@ -10,4 +10,47 @@ services:
     volumes:
       - .:/code
     ports:
-      - 8000:8000
+      - "8000:8000"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=super
+      - POSTGRES_HOST=db
+    depends_on:
+      - db
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+
+  bot:
+    container_name: tg_bot
+    build:
+      context: .
+      dockerfile: ./docker/tg_bot/Dockerfile
+    command: python main.py
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+
+  db:
+    image: postgres:13
+    container_name: blog_db
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=super
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+volumes:
+  postgres_data:
