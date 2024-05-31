@@ -1,38 +1,45 @@
 # Blog Application
 
-## User Experience
+## Overview
 
-- **Seamless Registration:** Users can easily sign up to become members of your blogging community, opening doors to a world of content.
-- **Effortless Access:** Once registered, users can log in and out with ease, ensuring their privacy and security.
-- **Never Lose Access:** Password recovery ensures that users can always regain access to their accounts, even if they forget their passwords.
-- **Personalized Profiles:** Users can personalize their profiles by editing details like their name, email, and avatar, making their presence on the platform uniquely theirs.
+Welcome to our blogging platform! Our application provides a seamless experience for users to create, manage, and engage with content through a combination of a Django web application, a Telegram bot, and website integration.
 
-## Content Management
+## Features
 
-- **Creative Expression:** Users have the power to create, read, update, and delete their articles, fostering a dynamic and evolving space for ideas and discussions.
+### User Experience
 
-# Telegram Bot Integration
+- **Seamless Registration:** Easily sign up and become a member of our blogging community.
+- **Effortless Access:** Log in and out with ease, ensuring privacy and security.
+- **Password Recovery:** Never lose access to your account with our password recovery feature.
+- **Personalized Profiles:** Customize your profile with your name, email, and avatar.
 
-## User Engagement
+### Content Management
 
-- **Warm Welcome:** The "/start" command welcomes users to the Telegram bot, setting a friendly tone from the start.
-- **Guidance at Hand:** The "/help" command provides users with a handy list of available commands and their descriptions, ensuring they can make the most of the bot's features.
-- **Stay Updated:** Users can use the "/latest" command to instantly access the newest blog article, keeping them informed and engaged.
+- **Creative Expression:** Create, read, update, and delete articles to foster dynamic discussions.
 
-## Interactive Features
+### Telegram Bot Integration
 
-- **Instant Notifications:** Subscribing to blog updates enables users to receive timely notifications in Telegram whenever a new article is published, keeping them in the loop and eager to explore fresh content.
+- **User Engagement:** Receive a warm welcome and guidance with commands like "/start" and "/help".
+- **Stay Updated:** Instantly access the latest blog articles with the "/latest" command.
+- **Interactive Features:** Subscribe to receive notifications in Telegram for new articles.
 
-# Website Integration
+### Website Integration
 
-## Timely Updates
+- **Timely Updates:** Explore the latest news posts, ensuring you're always up-to-date with fresh content.
 
-- **Current Content:** Users can explore the latest news posts, ensuring they're always up-to-date with the freshest content available, all within a day of publication.
+## Technical Deployment
 
-# Technical Deployment
+### Seamless Setup
+Before you begin, make sure you have the following programs installed on your computer:
 
-## Seamless Setup
+```bash
+docker --version
+```
 
+If after running this command, you were shown the docker version, then go to the next step, else follow these steps:
+
+- Docker: [Docker Installation Guide](https://docs.docker.com/get-docker/)
+- Docker Compose: [Docker Compose Installation Guide](https://docs.docker.com/compose/install/)
 1. **Clone Repository:** Simply copy the GitHub repository to your local machine to get started.
    ```bash
    git clone https://github.com/andrew389/blog.git
