@@ -26,10 +26,6 @@
                 </li>
             </ul>
         {% endif %}
-        <form method="post" action="{% url 'fetch_news' %}" class="ml-auto">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-primary">See Latest News</button>
-        </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false"

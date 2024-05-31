@@ -4,12 +4,15 @@
 
 {% block content %}
 <br/>
-	<div class="jumbotron">
-		<h1 class="display-4">Blog app</h1>
-		<p class="lead">A Blog website built with Django.</p>
-		<p class="lead">
-			<a class="btn btn-primary btn-lg" href="{% url 'article_list' %}"
-			role="button">View All Articles</a>
-		</p>
-	</div>
+<div class="jumbotron">
+    <h1 class="display-4">Blog app</h1>
+    <p class="lead">A Blog website built with Django.</p>
+    <div class="btn-group" role="group" aria-label="Button group">
+        <a class="btn btn-primary btn-lg rounded-right" href="{% url 'article_list' %}" role="button">View All Articles</a>
+        <form method="post" action="{% url 'fetch_news' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary btn-lg ml-3">See Latest News</button>
+        </form>
+    </div>
+</div>
 {% endblock content %}

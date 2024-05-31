@@ -2,12 +2,12 @@ from django.contrib import admin
 from .models import Article, Comment
 
 
-class CommentInline(admin.TabularInline): # new
+class CommentInline(admin.TabularInline):
 	model = Comment
 	extra = 0
 
 
-class ArticleAdmin(admin.ModelAdmin): # new
+class ArticleAdmin(admin.ModelAdmin):
 	inlines = [
 		CommentInline,
 	]

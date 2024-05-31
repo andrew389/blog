@@ -1,0 +1,20 @@
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=17: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=17
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=1: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=1
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+ERROR:root:Failed to fetch news from https://news.ycombinator.com/?p=16: 503 Server Error: Service Temporarily Unavailable for url: https://news.ycombinator.com/?p=16
+WARNING:django.request:Bad Request: /api/v1/articles/create/
+WARNING:django.request:Forbidden: /api/v1/articles/create/
+WARNING:django.request:Forbidden: /api/v1/articles/3/
+WARNING:django.request:Forbidden: /api/v1/articles/7/
+WARNING:django.request:Bad Request: /api/v1/articles/8/
+WARNING:django.request:Bad Request: /api/v1/articles/create/
+WARNING:django.request:Forbidden: /api/v1/articles/create/
+WARNING:django.request:Forbidden: /api/v1/articles/3/
+WARNING:django.request:Forbidden: /api/v1/articles/7/
+WARNING:django.request:Bad Request: /api/v1/articles/8/
