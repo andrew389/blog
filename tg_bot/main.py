@@ -11,6 +11,9 @@ from env_config.config import BOT_TOKEN
 
 
 def main() -> None:
+    """
+    Start the bot and set up event handlers.
+    """
     application = Application.builder().token(BOT_TOKEN).build()
 
     application.add_handler(CommandHandler("start", start))

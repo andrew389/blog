@@ -9,6 +9,12 @@ from env_config.config import FILE_PATH, BOT_TOKEN
 
 
 async def notify_new_article(article):
+    """
+    Notify subscribed users about a new article.
+
+    Args:
+        article (dict): The new article details.
+    """
     with open(FILE_PATH, "r") as file:
         chat_ids = file.readlines()
 
@@ -21,6 +27,12 @@ async def notify_new_article(article):
 
 
 async def set_commands(application: Application) -> None:
+    """
+    Set bot commands.
+
+    Args:
+        application (Application): The Telegram Application instance.
+    """
     commands = [
         BotCommand("start", "Welcome message"),
         BotCommand("help", "List of available commands"),

@@ -15,6 +15,13 @@ logger = logging.getLogger(__name__)
 
 
 async def start(update: Update, context: CallbackContext) -> None:
+    """
+    Handle the /start command by sending a welcome message and adding the user to the subscription list.
+
+    Args:
+        update (Update): The incoming update from Telegram.
+        context (CallbackContext): The context for the callback.
+    """
     keyboard = [
         [
             KeyboardButton("/start"), KeyboardButton("/help"), KeyboardButton("/latest"),
@@ -36,6 +43,13 @@ async def start(update: Update, context: CallbackContext) -> None:
 
 
 async def help_command(update: Update, context: CallbackContext) -> None:
+    """
+    Handle the /help command by sending a list of available commands.
+
+    Args:
+        update (Update): The incoming update from Telegram.
+        context (CallbackContext): The context for the callback.
+    """
     await update.message.reply_text('/start - Welcome message\n'
                                     '/help - List of available commands\n'
                                     '/latest - Get the latest article\n'
@@ -44,6 +58,13 @@ async def help_command(update: Update, context: CallbackContext) -> None:
 
 
 async def latest(update: Update, context: CallbackContext) -> None:
+    """
+    Handle the /latest command by fetching and sending the latest article from the Django API.
+
+    Args:
+        update (Update): The incoming update from Telegram.
+        context (CallbackContext): The context for the callback.
+    """
     response = requests.get(DJANGO_API_URL)
 
     if response.status_code == 200:
@@ -59,6 +80,13 @@ async def latest(update: Update, context: CallbackContext) -> None:
 
 
 async def subscribe(update: Update, context: CallbackContext) -> None:
+    """
+    Handle the /subscribe command by adding the user to the subscription list.
+
+    Args:
+        update (Update): The incoming update from Telegram.
+        context (CallbackContext): The context for the callback.
+    """
     chat_id = update.message.chat_id
 
     with open(FILE_PATH, "r") as file:
@@ -73,6 +101,13 @@ async def subscribe(update: Update, context: CallbackContext) -> None:
 
 
 async def unsubscribe(update: Update, context: CallbackContext) -> None:
+    """
+    Handle the /unsubscribe command by removing the user from the subscription list.
+
+    Args:
+        update (Update): The incoming update from Telegram.
+        context (CallbackContext): The context for the callback.
+    """
     chat_id = update.message.chat_id
 
     with open(FILE_PATH, "r") as file:
