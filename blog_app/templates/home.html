@@ -4,7 +4,7 @@
 
 {% block content %}
 <br/>
-<div class="jumbotron">
+<div class="jumbotron custom-jumbotron">
     <h1 class="display-4">Blog app</h1>
     <p class="lead">A Blog website built with Django.</p>
     <div class="btn-group" role="group" aria-label="Button group">
@@ -15,4 +15,11 @@
         </form>
     </div>
 </div>
+
+<style>
+    .custom-jumbotron {
+        border-radius: 20px; /* більше заокруглення */
+        padding: 2rem 2rem; /* додаткові паддінги */
+    }
+</style>
 {% endblock content %}

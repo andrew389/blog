@@ -3,10 +3,23 @@
 {% block title %}Log In{% endblock title %}
 
 {% block content %}
-<h2>Log In</h2>
-<form method="post">
-	{% csrf_token %}
-	{{ form.as_p }}
-	<button class="btn btn-success ml-2" type="submit">Log In</button>
-</form>
+	<div class="container d-flex justify-content-center">
+		<div class="jumbotron custom-jumbotron">
+			<h1>Login</h1>
+			<form action="" method="post">{% csrf_token %}
+				{{ form.as_p }}
+				<button class="btn btn-primary ml-2" type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+<style>
+    .custom-jumbotron {
+    	height: auto;
+    	width: 50%;
+        background-color: white; /* виправлено колір */
+        border-radius: 20px; /* більше заокруглення */
+        padding: 2rem 2rem; /* додаткові паддінги */
+        margin-top: 2rem; /* додано для відступу зверху */
+    }
+</style>
 {% endblock content %}
