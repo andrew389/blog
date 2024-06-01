@@ -1,32 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container d-flex justify-content-center">
-        <div class="jumbotron custom-jumbotron">
-            <h1>Edit</h1>
-            <form action="" method="post" class="needs-validation" novalidate>{% csrf_token %}
-                <div class="form-group">
-                    <label for="id_title">Title:</label>
-                    <input type="text" class="form-control" id="id_title" name="title" value="{{ form.title.value }}" required>
-                    <div class="invalid-feedback">
-                        Please provide a title.
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="id_content">Content:</label>
-                    <textarea class="form-control" id="id_content" name="content" rows="4" required>{{ form.content.value }}</textarea>
-                    <div class="invalid-feedback">
-                        Please provide some content.
-                    </div>
-                </div>
-                <a href="{% url 'article_list' %}" class="btn btn-primary ml-2">Update</a>
-            </form>
-        </div>
-    </div>
+	<div class="container d-flex justify-content-center">
+		<div class="jumbotron custom-jumbotron">
+			<h1>Edit</h1>
+			<form action="" method="post">{% csrf_token %}
+				{{ form.as_p }}
+				<button class="btn btn-primary ml-2" type="submit">Update</button>
+			</form>
+		</div>
+	</div>
 <style>
     .custom-jumbotron {
-        height: auto;
-        width: 50%;
+    	height: auto;
+    	width: 50%;
         background-color: white; /* виправлено колір */
         border-radius: 20px; /* більше заокруглення */
         padding: 2rem 2rem; /* додаткові паддінги */

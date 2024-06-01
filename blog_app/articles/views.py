@@ -7,13 +7,16 @@ from .models import Article
 
 class ArticleListView(LoginRequiredMixin, ListView):
     model = Article
-    template_name = 'articles/article_list.html'
+    template_name = "articles/article_list.html"
 
 
 class ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Article
-    template_name = 'articles/article_edit.html'
-    fields = ('title', 'body')
+    fields = (
+        "title",
+        "body",
+    )
+    template_name = "articles/article_edit.html"
 
     def test_func(self):
         obj = self.get_object()
@@ -37,9 +40,12 @@ class ArticleDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
     model = Article
-    template_name = 'articles/article_new.html'
-    fields = ('title', 'body')
+    template_name = "articles/article_new.html"
+    fields = ("title", "body")
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('article_list')
